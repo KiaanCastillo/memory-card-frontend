@@ -1,14 +1,12 @@
 .wrapper {
-  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  width: min-content;
   position: absolute;
   top: 1rem;
-  left: 0;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 99999 !important;
 }
 
@@ -19,9 +17,9 @@
   justify-content: center;
   border-radius: 0.25rem;
   color: #fff;
-  animation: fade-down 3s ease;
+  animation: fade-down 2s ease;
   opacity: 0;
-  margin-right: 1rem;
+  white-space: nowrap;
 }
 
 .toast.success {
@@ -38,12 +36,12 @@
     transform: translateY(-1rem);
   }
 
-  3% {
+  5% {
     opacity: 1;
     transform: translateY(0rem);
   }
 
-  97% {
+  95% {
     opacity: 1;
     transform: translateY(0rem);
   }

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { Card, Col } from "react-bootstrap";
-import background from "../../images/background.webp";
+import { Card, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 
@@ -14,9 +13,9 @@ const Home = () => {
           className="my-1"
           style={{ textAlign: "center", fontSize: "1.3rem" }}
         >
-          <b>Memory Card App</b>
+          <h1>Cardify</h1>
+          <p>CMPT 474 | Group 10</p>
         </Card.Header>
-        <Card.Img src={background} />
         <Card.Body
           className="mt-3"
           style={{ fontWeight: "600", fontSize: "1.1rem" }}
@@ -29,9 +28,16 @@ const Home = () => {
           </Card.Text>
           {!loggedIn && (
             <Card.Text className="mt-4">
-              Click <Link to="/login">Login</Link> to start creating <br />
-              If you are not already registered, click{" "}
-              <Link to="/register">Register</Link>
+              <Link to="/login">
+                <Button variant="primary" className="w-100 mt-3">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/register">
+                <Button variant="secondary" className="w-100 mt-3">
+                  Register
+                </Button>
+              </Link>
             </Card.Text>
           )}
         </Card.Body>

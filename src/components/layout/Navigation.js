@@ -18,7 +18,7 @@ const Navigation = () => {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
         <Link className="navbar-brand" to="/">
-          Memory Card
+          Cardify
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
